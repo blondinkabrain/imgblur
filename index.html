@@ -28,9 +28,9 @@
         :class="image.class"
         ></image-comp> -->
       <!-- <image-comp></image-comp> -->
-      <img class="image image_main" :src="imgSource" :alt="alt"/>
-      <img class="image image_blur left" :src="imgSource" :alt="image_blur"/>
-      <img class="image image_blur right" :src="imgSource" :alt="image_blur"/>
+      <img class="image image_blur left" :src="imgSource" alt="image_blur"/>
+      <img class="image image_main" :src="imgSource" alt="main" v-on:click="clicked"/>
+      <img class="image image_blur right" :src="imgSource" alt="image_blur"/>
     </div>
     <script src="../ext/index.js" type="text/javascript"></script>
   </body>

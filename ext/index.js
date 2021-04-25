@@ -15,8 +15,26 @@ const ImgBlurVueApp = {
       // ]
     }
   },
-  mounted() {
-  }
+  methods:{
+    clicked(event){
+      //document.getElementsByClassName('image_main')[0].getBoundingClientRect();
+
+      let rect = event.currentTarget.getBoundingClientRect();
+      document.body.style.setProperty('--img-margin', -Math.round(rect.width/2) + 'px');
+    }
+  },
+  // template: '<img class="image image_main" :src="imgSource" alt="main" v-on:click="clicked"/>',
+
+  // mounted() {
+  //   this.$nextTick(()=>{
+  //     debugger;
+  //   });
+  // },
+  // updated(){
+  //   debugger;
+  //    document.getElementsByClassName('image_main')[0].getBoundingClientRect();
+  // },
+
 }
 const app = Vue.createApp(ImgBlurVueApp);
 // app.component('image-comp', {
